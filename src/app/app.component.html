@@ -1,0 +1,7 @@
+<div id="container">
+    <div id="items" *ngFor="let color of Colors" [ngStyle]="{'background-color': color.hex}">
+        <div class="nm">{{color.name}}</div>
+        <input type="text" maxlength="7" id="{{color.id}}" class ="hx"value="{{color.hex}}"[ngStyle]="{'background-color': color.hex}">
+        <button id="chc" (click)="changeColour([color.id])"[ngStyle]="{'background-color': color.hex}" >Change colour</button>   
+    </div>
+</div>
